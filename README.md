@@ -1,5 +1,5 @@
 # Fedora Docker container
 
 This container derives from a base
-[vcatechnology/fedora](https://hub.docker.com/r/vcatechnology/fedora)
+[fedora](https://hub.docker.com/_/fedora)
 The latest package updates are installed
