@@ -21,11 +21,11 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 RUN dnf -y update && \
   dnf clean all --enablerepo=\*
 
-# Generate locales
-RUN cat /etc/locale.gen | expand | sed 's/^# .*$//g' | sed 's/^#$//g' | egrep -v '^$' | sed 's/^#//g' > /tmp/locale.gen \
-  && mv -f /tmp/locale.gen /etc/locale.gen \
-  && locale-gen
-ENV LANG=en_GB.utf8
+RUN dnf -y install langpacks-en_GB && echo "export LANG=en_GB.utf-8" > /opt/export_LANG.sh
+ENV BASH_ENV=/opt/export_LANG.sh \
+    ENV=/opt/export_LANG.sh \
+    PROMT_COMMAND="source /opt/export_LANG.sh"
+ENV LANG=en_GB.utf-8
 
 # Create install script
 RUN touch                                 /usr/local/bin/vca-install-package && \
