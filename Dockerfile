@@ -1,5 +1,6 @@
 FROM fedora
 MAINTAINER VCA Technology <developers@vcatechnology.com>
 
-# Install useful packages
-RUN dnf upgrade -y
+# Update all packages
+RUN dnf -y update && \
+  dnf clean all --enablerepo=\*
