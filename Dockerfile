@@ -1,4 +1,4 @@
-FROM fedora:24
+FROM fedora
 MAINTAINER VCA Technology <developers@vcatechnology.com>
 
 # Install useful packages
