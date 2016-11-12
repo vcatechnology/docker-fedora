@@ -9,7 +9,7 @@ ARG VERSION
 LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.name="$PROJECT_NAME" \
       org.label-schema.description="A Fedora image that has new packages installed daily" \
-      org.label-schema.url="https://www.debian.org/" \
+      org.label-schema.url="https://getfedora.org/" \
       org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.vcs-url="https://github.com/vcatechnology/docker-fedora" \
       org.label-schema.vendor="VCA Technology" \
