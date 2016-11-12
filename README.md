@@ -1,8 +1,7 @@
-# Fedora Docker container
+# Fedora Docker Container
 
-This container derives from a base
-[fedora](https://hub.docker.com/_/fedora)
-The latest package updates are installed
+[![](https://images.microbadger.com/badges/image/vcatechnology/fedora.svg)](http://microbadger.com/images/vcatechnology/fedora "Image Layers") [![](https://images.microbadger.com/badges/version/vcatechnology/fedora.svg)](http://microbadger.com/images/vcatechnology/fedora "Image Version") [![](https://images.microbadger.com/badges/license/vcatechnology/fedora.svg)](https://microbadger.com/images/vcatechnology/fedora "Image License")  [![](https://images.microbadger.com/badges/commit/vcatechnology/fedora.svg)](https://github.com/vcatechnology/docker-fedora "Image Commit")
 
-[![](https://images.microbadger.com/badges/image/vcatechnology/fedora.svg)](http://microbadger.com/images/vcatechnology/fedora "Get your own image badge on microbadger.com")
-[![](https://images.microbadger.com/badges/version/vcatechnology/fedora.svg)](http://microbadger.com/images/vcatechnology/fedora "Get your own version badge on microbadger.com")
+Built daily so that the image has the latest [Fedora](https://www.getfedora.org/) packages.
+
+Available on Docker Hub as [vcatechnology/fedora](https://hub.docker.com/r/vcatechnology/fedora/)
