@@ -38,5 +38,5 @@ RUN vca-install-package langpacks-en_GB
 ENV LANG=en_GB.UTF-8
 
 # Update all packages
-RUN dnf -y update \
+RUN dnf -qy update \
  && dnf clean all --enablerepo=\*
