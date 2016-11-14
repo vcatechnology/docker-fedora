@@ -26,11 +26,12 @@ RUN touch                                   /usr/local/bin/vca-install-package \
  && echo 'dnf clean all --enablerepo=\*' >> /usr/local/bin/vca-install-package
 
 # Create uninstall script
-RUN touch                       /usr/local/bin/vca-uninstall-package \
- && chmod +x                    /usr/local/bin/vca-uninstall-package \
- && echo '#! /bin/sh'        >> /usr/local/bin/vca-uninstall-package \
- && echo 'set -e'            >> /usr/local/bin/vca-uninstall-package \
- && echo 'dnf -qy remove $@' >> /usr/local/bin/vca-uninstall-package
+RUN touch                                   /usr/local/bin/vca-uninstall-package \
+ && chmod +x                                /usr/local/bin/vca-uninstall-package \
+ && echo '#! /bin/sh'                    >> /usr/local/bin/vca-uninstall-package \
+ && echo 'set -e'                        >> /usr/local/bin/vca-uninstall-package \
+ && echo 'dnf -qy remove $@'             >> /usr/local/bin/vca-uninstall-package \
+ && echo 'dnf clean all --enablerepo=\*' >> /usr/local/bin/vca-uninstall-package
 
 # Set the locale
 RUN vca-install-package langpacks-en_GB
