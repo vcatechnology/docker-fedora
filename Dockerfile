@@ -1,4 +1,4 @@
-FROM fedora
+FROM fedora:25
 MAINTAINER VCA Technology <developers@vcatechnology.com>
 
 # Build-time metadata as defined at http://label-schema.org
