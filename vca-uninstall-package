@@ -1,4 +1,5 @@
 #! /bin/sh
 set -e
 dnf -qy --setopt=deltarpm=false remove $@
+dnf -qy --setopt=deltarpm=false autoremove
 dnf clean all --enablerepo=\*
