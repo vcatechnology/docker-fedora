@@ -17,21 +17,9 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.license=MIT \
       org.label-schema.schema-version="1.0"
 
-# Create install script
-RUN touch                                                /usr/local/bin/vca-install-package \
- && chmod +x                                             /usr/local/bin/vca-install-package \
- && echo '#! /bin/sh'                                 >> /usr/local/bin/vca-install-package \
- && echo 'set -e'                                     >> /usr/local/bin/vca-install-package \
- && echo 'dnf -qy --setopt=deltarpm=false install $@' >> /usr/local/bin/vca-install-package \
- && echo 'dnf clean all --enablerepo=\*'              >> /usr/local/bin/vca-install-package
-
-# Create uninstall script
-RUN touch                                               /usr/local/bin/vca-uninstall-package \
- && chmod +x                                            /usr/local/bin/vca-uninstall-package \
- && echo '#! /bin/sh'                                >> /usr/local/bin/vca-uninstall-package \
- && echo 'set -e'                                    >> /usr/local/bin/vca-uninstall-package \
- && echo 'dnf -qy --setopt=deltarpm=false remove $@' >> /usr/local/bin/vca-uninstall-package \
- && echo 'dnf clean all --enablerepo=\*'             >> /usr/local/bin/vca-uninstall-package
+# Create package scripts
+ADD vca-install-package /usr/local/bin
+ADD vca-uninstall-package /usr/local/bin
 
 # Set the locale
 RUN vca-install-package langpacks-en_GB

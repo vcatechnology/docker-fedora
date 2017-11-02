@@ -1,0 +1,4 @@
+#! /bin/sh
+set -e
+dnf -qy --setopt=deltarpm=false remove $@
+dnf clean all --enablerepo=\*

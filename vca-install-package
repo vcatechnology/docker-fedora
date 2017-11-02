@@ -1,0 +1,4 @@
+#! /bin/sh
+set -e
+dnf --quiet --assumeyes --setopt=deltarpm=false install $@
+dnf clean all --enablerepo=\*
